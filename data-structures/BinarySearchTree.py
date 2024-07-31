@@ -1,12 +1,10 @@
-# Comment later
-
 from collections import deque
 
 class TreeNode:
     def __init__(self, key):
+        self.key = key
         self.left = None
         self.right = None
-        self.val = key
 
 class BinaryTree:
     def __init__(self):
@@ -39,6 +37,7 @@ class BinaryTree:
         return root
     
     def deleteDeepest(self, root, d_node):
+        
         q = deque()
         q.append(root)
 
@@ -94,6 +93,16 @@ class BinaryTree:
             self.deleteDeepest(root, temp)
 
         return root
+    
+    def search(self, root, key):
+
+        if root is None or root.key == key:
+            return root
+        
+        if root.key < key:
+            return self.search(root.right, key)
+        
+        return self.search(root.left, key)
 
     def inorderTraversal(self, root):
 
