@@ -4,6 +4,19 @@
 # - always smaller than the child node(s) and the key of the root node
 # is the smallest among all other nodes (min heap property)
 
+# Heaps provide fast access to maximum/minimum element (O(1)),
+# efficient insertion and deletion (O(logn)), flexible size,
+# efficient to implement as an array, and suitable for real-
+# time applications. 
+
+# Heaps provide fast access to max/min elements (O(1)), efficient
+# insertion and deletion (O(logn)), flexible size, can
+# be efficiently implemented as an array, and suitable
+# for real-time applications. But they are not suitable
+# for searching for an element other than max/min (O(n) worst
+# case), they have extra memory overhead to maintain heap
+# structure, and they are slower than other data structures for
+# non-priority queue operations
 class maxHeap:
 
     arr = []

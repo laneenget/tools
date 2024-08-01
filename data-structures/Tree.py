@@ -26,7 +26,7 @@ class Tree:
     def __init__(self):
         self.root = None
 
-    def isEmpty(self):
+    def is_empty(self):
         return True if self.root is None else False
 
     def pre_order_traversal(self, node):
