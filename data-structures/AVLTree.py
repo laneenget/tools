@@ -11,7 +11,7 @@
 # and provide complicated insertion and removal operations as more rotations
 # are performed.
 
-class AVLWithParent:
+class AVLNode:
     def __init__(self, key):
         self.left = None
         self.right = None
@@ -131,7 +131,7 @@ class AVLTree:
     def insert(self, root, parent, key):
 
         if root is None:
-            root = AVLWithParent(key)
+            root = AVLNode(key)
             root.par = parent
         elif root.key > key:
             root.left = self.insert(root.left, root, key)
